@@ -49,7 +49,7 @@ int Get_Table(int t)    //从文件中加载域名-IP表，返回表的项数
 	if (t == 1)
 		infile.open(file_name.c_str(), ios::in);
 	else
-		infile.open("dnsrelay.txt", ios::in);
+		infile.open("host", ios::in);
 	if (!infile)
 	{
 		cout << "Can't open the dns file" << endl;
