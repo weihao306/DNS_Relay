@@ -17,7 +17,7 @@ using namespace std;
 #define BUF_SIZE 512
 #define DOMAIN_LENGTH 67
 #define MAX 1000
-#define EXTERNAL_DNS "10.3.9.4"
+#define EXTERNAL_DNS "223.5.5.5"	//公共DNS
 typedef struct
 {
 	string ip;        //save the ip
@@ -49,7 +49,7 @@ int Get_Table(int t)    //从文件中加载域名-IP表，返回表的项数
 	if (t == 1)
 		infile.open(file_name.c_str(), ios::in);
 	else
-		infile.open("host", ios::in);
+		infile.open("hosts", ios::in);
 	if (!infile)
 	{
 		cout << "Can't open the dns file" << endl;
